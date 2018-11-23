@@ -1,0 +1,98 @@
+:root {
+    --backgroundColour: #f8f8f8;
+    --uiColour: #4688f2;
+    --uiHoverColour: #5c97f5;
+}
+
+* {
+    font-family: "Overpass", "Roboto", sans-serif;
+}
+
+h1, code {
+    font-family: "Overpass Mono", "Roboto Mono", sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+span, strong, em {
+    font-family: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+section, footer {
+    margin: 8px;
+    padding: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+section.cover {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    background-color: var(--backgroundColour);
+    text-align: center;
+}
+
+div.coverMain {
+    padding-top: 40vh;
+    width: 100vw;
+    height: 10vh;
+    font-size: 10vh;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    font-family: "Overpass Mono", "Roboto Mono", sans-serif;
+    background-color: var(--backgroundColour);
+}
+
+button {
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--uiColour);
+    color: white;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: var(--uiHoverColour);
+    cursor: pointer;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+@media (max-width: 120vh) {
+    div.coverMain {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 500px) {
+    section, footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
