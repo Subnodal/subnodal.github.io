@@ -17,6 +17,14 @@ h1 {
     font-size: 1.5em;
 }
 
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
 span, strong, em {
     font-family: inherit;
 }
@@ -24,6 +32,19 @@ span, strong, em {
 html, body {
     margin: 0;
     padding: 0;
+}
+
+header {
+    position: fixed;
+    padding: 8px;
+    padding-left: 58px;
+    padding-right: 58px;
+    width: calc(100% - 116px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.headerLogo {
+    width: 100px;
 }
 
 section, footer {
@@ -64,7 +85,7 @@ button {
     border: none;
     background-color: var(--uiColour);
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     transition: 0.5s;
 }
 
@@ -85,6 +106,9 @@ button:hover {
     text-align: right;
 }
 
+.noMargin {
+    margin: 0;
+}
 
 .arrowContainer {
     width: 100px;
@@ -137,8 +161,6 @@ button:hover {
     color: white;
 }
 
-/* Custom Animate.css */
-
 .animated.hinge {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
@@ -182,6 +204,24 @@ button:hover {
     animation-iteration-count: infinite;
 }
 
+.showcaseItem:after {
+    display: table;
+    margin-bottom: 30px;
+    content: "";
+    clear: both;
+}
+
+.showcaseImage {
+    width: 5vw;
+    float: left;
+}
+
+.showcaseDescription {
+    margin-left: 20px;
+    width: calc(95% - 40px);
+    float: left;
+}
+
 @media (max-width: 120vh) {
     div.coverMain {
         font-size: 8vw;
@@ -189,8 +229,25 @@ button:hover {
 }
 
 @media (max-width: 500px) {
+    header {
+        padding-left: 28px;
+        padding-right: 28px;
+        width: calc(100% - 56px);
+    }
+
     section, footer {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .showcaseImage {
+        width: 20vw;
+        float: none;
+    }
+
+    .showcaseDescription {
+        width: 100%;
+        margin-left: 0;
+        float: none;
     }
 }
