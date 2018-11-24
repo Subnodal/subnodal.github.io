@@ -24,4 +24,4 @@ $(function() {
             $("header").fadeOut();
         }
     });
-  });
+});
