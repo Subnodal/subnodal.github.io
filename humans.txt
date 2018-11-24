@@ -1,0 +1,12 @@
+Hello, fellow human!
+
+We're {subnodal}
+
+We are an online project-making group based in Norwich, England. We develop
+cool products that make your life easier.
+
+We are:
+* Sebastian Doe (@sebastiandoe5 on GitHub)
+* James Livesey (@James-Livesey on GitHub)
+
+See you on the internet!
