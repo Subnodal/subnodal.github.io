@@ -40,17 +40,18 @@
         };
         firebase.initializeApp(config);
         </script>
+        <script src="protected.js"></script>
     </head>
     <body>
         <header>
             <a href="index.html"><img src="media/Short.svg" alt="Subnodal logo" class="headerLogo" /></a>
         </header>
         <section>
-            <h1>404 Error: Page Not Found</h1>
+            <h1>Your Account!</h1>
             <p>
-                We couldn't find the page you were looking for.
+                Here's your account. It's still in development.
             </p>
-            <button onclick="window.open('index.html');">Go Home</button>
+            <button onclick="firebase.auth().signOut();">Sign Out</button>
         </section>
     </body>
 </html>
