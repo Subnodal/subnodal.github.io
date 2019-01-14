@@ -12,7 +12,7 @@ $(function() {
             $.ajax({
                 url: $(this).attr("import"),
                 error: function() {
-                    $(thisPassOn).html("Could not load associated information.");
+                    $(thisPassOn).html(_("Could not load associated information."));
                 }
             }).done(function(data) {
                 $(thisPassOn).html(data);
@@ -29,7 +29,7 @@ $(function() {
             $.ajax({
                 url: $(this).attr("markdown"),
                 error: function() {
-                    $(thisPassOn).html("Could not load associated information.");
+                    $(thisPassOn).html(_("Could not load associated information."));
                 }
             }).done(function(data) {
                 $(thisPassOn).html(new showdown.Converter().makeHtml(data));
@@ -47,7 +47,7 @@ $(function() {
                 $.ajax({
                     url: $(this).attr("markdownrf"),
                     error: function() {
-                        $(thisPassOn).html("Could not load associated information.");
+                        $(thisPassOn).html(_("Could not load associated information."));
                     }
                 }).done(function(data) {
                     if ($(thisPassOn).html() != new showdown.Converter().makeHtml(data)) {
