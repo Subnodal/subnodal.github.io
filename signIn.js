@@ -10,4 +10,10 @@ $(function() {
             window.location.href = "account.html";
         }
     });
+
+    $("#password").keydown(function(e) {
+        if (e.keyCode == 13) {
+            signIn();
+        }
+    });
 });
