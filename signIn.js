@@ -1,3 +1,8 @@
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 function switchTo(page, switchFrom = -1) {
     if (switchFrom == 0) {
         $("#getEmail").val($("#email").val());
@@ -24,6 +29,9 @@ function signIn() {
 function nextAfterSignUp() {
     if ($("#getPassword").val() == $("#confirmPassword").val()) {
         alert("Coming soon! You don't yet have an account.");
+
+        // Do later!
+        // firebase.auth().createUserWithEmailAndPassword($("#email").val(), $("#password").val());
     } else {
         $("#getError").text(_("Both passwords are different. Please retype your password in both fields."));
     }

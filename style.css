@@ -2,7 +2,6 @@
     --backgroundColour: #f8f8f8;
     --coverTextColour: #404040;
     --uiColour: #4688f2;
-    --uiColour: #4688f2;
     --uiTextColour: white;
     --uiHoverColour: #5c97f5;
     --uiDeselectedColour: #71a3f3;
@@ -135,7 +134,7 @@ a.hidden:hover {
     text-decoration: unset;
 }
 
-input {
+input, select {
     margin: 4px;
     padding: 8px;
     padding-left: 10px;
@@ -145,13 +144,58 @@ input {
     background-color: var(--uiInputColour);
     color: var(--uiInputTextColour);
     transition: 0.5s;
-    cursor: text;
     user-select: unset;
 }
 
-input.signInPage {
+input[type=checkbox] {
+    width: 0;
+    height: 0;
+    outline: none;
+    margin: 10px;
+}
+
+input[type=checkbox]::before {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    content: "";
+    border-radius: 5px;
+    background-color: var(--uiInputColour);
+    transition: 0.5s;
+}
+
+input[type=checkbox]:checked::before {
+    background: url("media/Checkmark.png") no-repeat;
+    background-size: 100%;
+    background-color: var(--uiColour);
+}
+
+input[type=checkbox]:focus::before {
+    outline: auto;
+}
+
+input.signInPage, select.signInPage {
     background-color: white;
     width: 300px;
+}
+
+select.signInPage {
+    width: 320px;
+}
+
+.checkboxContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.checkboxContainer.signInPage {
+    width: 320px;
+    padding-left: 15px;
 }
 
 .left {
@@ -168,6 +212,11 @@ input.signInPage {
 
 .noMargin {
     margin: 0;
+}
+
+.checkboxContainer {
+    display: flex;
+    flex-direction: row;
 }
 
 .arrowContainer {
@@ -310,6 +359,10 @@ input.signInPage {
     margin-bottom: 15px;
 }
 
+.required {
+    color: #ff3838;
+}
+
 @media (max-width: 120vh) {
     div.coverMain {
         font-size: 8vw;
@@ -328,8 +381,12 @@ input.signInPage {
         padding-right: 20px;
     }
 
-    input.signInPage {
+    input.signInPage, select.signInPage {
         width: 250px;
+    }
+
+    select.signInPage {
+        width: 270px;
     }
 
     .showcaseImage {
@@ -350,5 +407,10 @@ input.signInPage {
 
     .signInPageButtons {
         width: 270px;
+    }
+
+    .checkboxContainer.signInPage {
+        width: 270px;
+        padding-left: 15px;
     }
 }

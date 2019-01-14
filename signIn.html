@@ -69,13 +69,17 @@
                         <input type="email" placeholder="Email" class="signInPage" id="getEmail">
                         <input type="password" placeholder="Password" class="signInPage" id="getPassword">
                         <input type="password" placeholder="Confirm Password" class="signInPage" id="confirmPassword">
+                        <div class="left checkboxContainer signInPage">
+                            <input type="checkbox" tabindex="0" id="getConsent">
+                            <label for="getConsent">@I have read and accept the <a href="javascript:alert('Coming soon!');" target="_blank">Terms of Service</a> and <a href="javascript:alert('Coming soon!');" target="_blank">Privacy Policy</a>.</label>
+                        </div>
                         <div>
                             <small id="getError"></small>
                         </div>
                     </div>
                     <div class="signInPageButtons right">
                         <button onclick="switchTo($('.signInSwitch'), 1);" class="flat">@Sign In</button>
-                        <button onclick="nextAfterSignUp();">@Next</button>
+                        <button onclick="alert('Coming soon!');">@Create</button>
                     </div>
                 </div>
             </div>
