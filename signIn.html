@@ -49,17 +49,34 @@
                 <h1 class="center"><a href="index.html" target="_blank" class="hidden">{subnodal}</a></h1>
             </section>
             <div class="card signInPage center">
-                <div class="signInPageContent center">
-                    <h2 class="mono">@Sign into Subnodal</h2>
-                    <input type="email" placeholder="Email" class="signInPage" id="email">
-                    <input type="password" placeholder="Password" class="signInPage" id="password">
-                    <div>
-                        <small id="error"></small>
+                <div class="accountPage signInSwitch">
+                    <div class="signInPageContent center">
+                        <h2 class="mono">@Sign into Subnodal</h2>
+                        <input type="email" placeholder="Email" class="signInPage" id="email">
+                        <input type="password" placeholder="Password" class="signInPage" id="password">
+                        <div>
+                            <small id="error"></small>
+                        </div>
+                    </div>
+                    <div class="signInPageButtons right">
+                        <button onclick="switchTo($('.signUpSwitch'), 0);" class="flat">@Create Account</button>
+                        <button onclick="signIn();">@Sign In</button>
                     </div>
                 </div>
-                <div class="signInPageButtons right">
-                    <button onclick="alert('Coming soon!');" class="flat">@Create Account</button>
-                    <button onclick="signIn();">@Sign In</button>
+                <div class="accountPage signUpSwitch">
+                    <div class="signInPageContent center">
+                        <h2 class="mono">@Create a Subnodal account</h2>
+                        <input type="email" placeholder="Email" class="signInPage" id="getEmail">
+                        <input type="password" placeholder="Password" class="signInPage" id="getPassword">
+                        <input type="password" placeholder="Confirm Password" class="signInPage" id="confirmPassword">
+                        <div>
+                            <small id="getError"></small>
+                        </div>
+                    </div>
+                    <div class="signInPageButtons right">
+                        <button onclick="switchTo($('.signInSwitch'), 1);" class="flat">@Sign In</button>
+                        <button onclick="nextAfterSignUp();">@Next</button>
+                    </div>
                 </div>
             </div>
         </main>
