@@ -115,6 +115,26 @@ button.flat {
     color: var(--uiFlatTextColour);
 }
 
+a {
+    font-family: inherit;
+    color: var(--coverTextColour);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.hidden {
+    font-family: unset;
+    color: inherit;
+    text-decoration: unset;
+}
+
+a.hidden:hover {
+    text-decoration: unset;
+}
+
 input {
     margin: 4px;
     padding: 8px;
