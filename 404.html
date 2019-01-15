@@ -3,8 +3,7 @@
     <head>
         <title>@Page Not Found - Subnodal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono">
-        <link rel="stylesheet" href="lib/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono|Material+Icons">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="media/Account.png">
         <script src="lib/jquery.min.js"></script>
@@ -12,7 +11,7 @@
         <script src="lib/lang.js"></script>
         <script src="lang/overrides.js"></script>
         <script src="script.js"></script>
-        <script src="index.js"></script>
+        <script src="404.js"></script>
         <meta name="yandex-verification" content="71af9e4822c04b20" />
         <meta name="Title" content="Subnodal">
         <meta name="Keywords" content="subnodal innovation GameProxy industry coding programming data developing ideas">
@@ -46,12 +45,19 @@
         <header>
             <a href="index.html"><img src="media/Short.svg" alt="Subnodal logo" class="headerLogo" /></a>
         </header>
-        <section>
-            <h1>404 Error: Page Not Found</h1>
-            <p>
-                We couldn't find the page you were looking for.
-            </p>
-            <button onclick="window.open('index.html');">Go Home</button>
-        </section>
+        <main>
+            <section class="cover dark">
+                <div class="coverMain">
+                    <code id="coverAnimation"><noscript>404</noscript></code>
+                    <div class="arrowContainer">
+                        <a href="index.html" aria-label="Scroll down" class="arrow2">
+                            <i class="material-icons">home</i>
+                        </a>
+                        <div class="arrow1 animated hinge infinite zoomIn"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer import="footer.html"></footer>
     </body>
 </html>

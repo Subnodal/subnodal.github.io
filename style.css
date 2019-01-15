@@ -31,6 +31,11 @@ h3 {
     font-size: 1.1em;
 }
 
+h1.logo, h2.logo, h3.logo {
+    color: var(--coverTextColour);
+    font-weight: 400;
+}
+
 p {
     font-size: 1.1em;
 }
@@ -76,6 +81,11 @@ section.cover {
     background-color: var(--backgroundColour);
     color: var(--coverTextColour);
     text-align: center;
+}
+
+section.cover.dark {
+    background-color: var(--coverTextColour);
+    color: var(--backgroundColour);
 }
 
 div.coverMain {
@@ -252,6 +262,10 @@ select.signInPage {
     cursor: pointer;
 }
 
+.arrow2:hover {
+    text-decoration: none;
+}
+
 .arrow2:before {
     width: 52px;
     height: 52px;
@@ -262,7 +276,7 @@ select.signInPage {
     left: 2px;
 }
 
-.arrow2 i.fa {
+.arrow2 i {
     font-size: 30px;
     display: table-cell;
     vertical-align: middle;
