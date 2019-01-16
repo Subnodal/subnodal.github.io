@@ -119,9 +119,19 @@ button:hover {
     cursor: pointer;
 }
 
+button:disabled {
+    background-color: var(--coverTextColour);
+    cursor: default;
+}
+
 button.flat {
     background-color: inherit;
     color: var(--uiFlatTextColour);
+}
+
+button.flat:disabled {
+    background-color: inherit;
+    color: var(--coverTextColour);
 }
 
 a {
@@ -361,7 +371,7 @@ select.signInPage {
 
 .signInPageContent {
     min-height: 200px;
-    max-height: 250px;
+    max-height: 300px;
     overflow: auto;
     margin-bottom: 10px;
 }

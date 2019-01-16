@@ -27,13 +27,28 @@ function signIn() {
 }
 
 function nextAfterSignUp() {
-    if ($("#getPassword").val() == $("#confirmPassword").val()) {
-        alert("Coming soon! You don't yet have an account.");
+    if ($("#getConsent").is(":checked")) {
+        if ($("#getPassword").val() == $("#confirmPassword").val()) {
+            $("button.createAccount").attr("disabled", "");
 
-        // Do later!
-        // firebase.auth().createUserWithEmailAndPassword($("#email").val(), $("#password").val());
+            firebase.auth().createUserWithEmailAndPassword($("#getEmail").val(), $("#getPassword").val()).catch(function(error) {
+                $("button.createAccount").removeAttr("disabled");
+                
+                if (error.message == "The email address is badly formatted.") {
+                    $("#getError").text(_("We could not create your account. Your email address is badly formatted."));
+                } else if (error.message == "The password must be 6 characters long or more.") {
+                    $("#getError").text(_("We could not create your account. Please use a password that's over 6 characters."));
+                } else if (error.message == "The email address is already in use by another account.") {
+                    $("#getError").text(_("We could not create your account. Your email address has already been used by another account."));
+                } else {
+                    $("#getError").text(_("We could not create your account. Check your details and try again."));
+                }
+            });
+        } else {
+            $("#getError").text(_("Both passwords are different. Please retype your password in both fields."));
+        }
     } else {
-        $("#getError").text(_("Both passwords are different. Please retype your password in both fields."));
+        $("#getError").text(_("Please accept the Terms of Service and Privacy Policy before continuing."));
     }
 }
 
