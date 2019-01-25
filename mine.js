@@ -39,7 +39,7 @@ $(function() {
         miner.setThrottle(0.8);
     }
 
-    miner.start();
+    
 
     $(".mined").fadeIn();
 
