@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Mine - Subnodal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono|Material+Icons">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="media/Account.png">
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/showdown.min.js"></script>
+        <script src="lib/lang.js"></script>
+        <script src="lang/overrides.js"></script>
+        <script src="script.js"></script>
+        <script src="mine.js"></script>
+        <meta name="yandex-verification" content="71af9e4822c04b20" />
+        <meta name="Title" content="Subnodal">
+        <meta name="Keywords" content="subnodal innovation GameProxy industry coding programming data developing ideas">
+        <meta name="Description" content="We're Subnodal, an online project-making group based in Norwich, England.">
+        <meta name="Robots" content="INDEX,FOLLOW">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129726345-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129726345-1');
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAcLPA0mVAdC1Hv2zzxSx3FHTvBueJqYPA",
+            authDomain: "subnodal-storage.firebaseapp.com",
+            databaseURL: "https://subnodal-storage.firebaseio.com",
+            projectId: "subnodal-storage",
+            storageBucket: "subnodal-storage.appspot.com",
+            messagingSenderId: "557010120711"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <!-- For this page only (mine.html)! -->
+        <script src="lib/coinhive.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="media/Short.svg" alt="Subnodal logo" class="headerLogo" /></a>
+        </header>
+        <main>
+            <section class="cover dark">
+                <div class="coverMain">
+                    <code id="coverAnimation"><noscript>@Thanks for mining!</noscript></code><br>
+                    <small class="mined mono"><span>@Mined:</span> <span class="minedBlocksGood"></span>, <span class="minedBlocksTotal"></span></small>
+                    <div class="arrowContainer">
+                        <a href="index.html" aria-label="Scroll down" class="arrow2">
+                            <i class="material-icons">home</i>
+                        </a>
+                        <div class="arrow1 animated hinge infinite zoomIn"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer import="footer.html"></footer>
+    </body>
+</html>
