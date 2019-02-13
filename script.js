@@ -79,4 +79,6 @@ $(function() {
             $("header").fadeOut();
         }
     });
+
+    $("[data-tl]").text(_($("[data-tl]").text()));
 });
