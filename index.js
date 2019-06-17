@@ -1,5 +1,5 @@
 $(function() {
-    var coverText = _("We're {\1subnodal\2}");
+    var coverText = _("We're {\1not actually a company but listen we make cool stuff so yeah\2}");
     var doStrong = false;
 
     $("#coverAnimation").html("");
