@@ -1,5 +1,5 @@
 $(function() {
-    var coverText = _("We're {\subnode al\2}");
+    var coverText = _("We're {\subnodal\2}");
     var doStrong = false;
 
     $("#coverAnimation").html("");
