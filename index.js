@@ -1,5 +1,5 @@
 $(function() {
-    var coverText = _("We're {\1trash coders\2}");
+    var coverText = _("We're {\1trash coders lol just kidding we're amazing hire us lol\2}");
     var doStrong = false;
 
     $("#coverAnimation").html("");
