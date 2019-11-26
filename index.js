@@ -1,5 +1,5 @@
 $(function() {
-    var coverText = _("We're {\1subnodal\2}");
+    var coverText = _("We're {\1amazing developers who make cool products and do cool things. One of our projects includes GameProxy, which is a cool online gaming site. In our chats, we like saying the phrase lol for no reason whatsoever. However, hopefully you like our site and our products! Feel free to tweet us on Twitter as well if you like our products. Some of our products other than GameProxy include Movenet, IAmAt and subOS which are all revolutionary online technology products. subOS is an operating system with movable and closable tabs made in just HTML, CSS and Javascript. Truly revolutional! Anyway, check it out if you want. Movenet is amazing for checking live and scheduled departure times for loads of types of public transport.\2}");
     var doStrong = false;
 
     $("#coverAnimation").html("");
