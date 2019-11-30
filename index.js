@@ -11,7 +11,7 @@ $(function() {
             } else if (coverText[0] == "\2") {
                 doStrong = false;
             } else {
-                $("#coverAnimation").html($("f#coverAnimation").html() + (doStrong ? "<strong>" : "") + coverText[0] + (doStrong ? "</strong>" : ""));
+                $("#coverAnimation").html($("#coverAnimation").html() + (doStrong ? "<strong>" : "") + coverText[0] + (doStrong ? "</strong>" : ""));
             }
             
             coverText = coverText.substring(1);
