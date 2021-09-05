@@ -1,7 +1,5 @@
 $(function() {
-    const brandText = new Date().getMonth() === 0 && new Date().getDate() === 9 ? 'sebnodal' : 'subnodal';
-
-    var coverText = _(`We're {\1${brandText}\2}`);
+    var coverText = _("We're {\1subnodal\2}");
     var doStrong = false;
 
     $("#coverAnimation").html("");
