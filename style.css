@@ -1,0 +1,18 @@
+@import url("/fonts/fonts.css");
+
+body {
+    font-family: "Overpass", system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+.mono {
+    font-family: "Overpass Mono";
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.line {
+    display: inline-block;
+}
