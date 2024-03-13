@@ -3,7 +3,8 @@ Hello, fellow human!
 We're {subnodal}
 
 We are an online project-making group based in Norwich, England. We develop
-cool products that make your life easier.
+cool products that make your life easier. Subnodal is currently (as of 2024)
+getting a complete reboot; and we hope to reveal a brand-new Subnodal soon!
 
 We are:
 * Sebastian Doe (@sd0e on GitHub)

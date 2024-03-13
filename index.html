@@ -1,143 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title data-tl>Subnodal</title>
+        <title>Subnodal</title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono|Material+Icons">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="media/Account.png">
-        <script src="lib/jquery.min.js"></script>
-        <script src="lib/showdown.min.js"></script>
-        <script src="lib/lang.js"></script>
-        <script src="lang/overrides.js"></script>
-        <script src="script.js"></script>
-        <script src="index.js"></script>
         <meta name="yandex-verification" content="3aa19c46be706d8d" />
         <meta name="Title" content="Subnodal">
-        <meta name="Keywords" content="subnodal innovation GameProxy industry coding programming data developing ideas">
-        <meta name="Description" content="We're Subnodal, an online project-making group based in Norwich, England.">
-        <meta name="Robots" content="INDEX,FOLLOW">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129726345-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-129726345-1');
-        </script> 
-        <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-        <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAcLPA0mVAdC1Hv2zzxSx3FHTvBueJqYPA",
-            authDomain: "subnodal-storage.firebaseapp.com",
-            databaseURL: "https://subnodal-storage.firebaseio.com",
-            projectId: "subnodal-storage",
-            storageBucket: "subnodal-storage.appspot.com",
-            messagingSenderId: "557010120711"
-        };
-        firebase.initializeApp(config);
-        </script>
+        <meta name="Description" content="Subnodal is getting a reboot. Looking forward to seeing you on the internet soon!">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/index.css">
+        <link rel="shortcut icon" href="/media/account.png">
+        <script src="script.js"></script>
     </head>
-    <body>
-        <header>
-            <a href="index.html"><img src="media/Short.svg" alt="Subnodal logo" class="headerLogo" /></a>
-        </header>
+    <body class="gradient">
         <main>
-            <section class="cover">
-                <div class="coverMain">
-                    <code id="coverAnimation"><noscript>@We're {<strong>subnodal</strong>}</noscript></code>
-                    <div class="arrowContainer">
-                        <a href="javascript:scrollDown();" aria-label="Scroll down" class="arrow2">
-                            <i class="material-icons">keyboard_arrow_down</i>
-                        </a>
-                        <div class="arrow1 animated hinge infinite zoomIn"></div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h1>
-                    @Welcome to Subnodal.
-                </h1>
-                <p>
-                    @We are an online project-making group based in Norwich,
-                    England. We develop cool products that make your life easier.
-                </p>
-            </section>
-            <section>
-                <h1>@Projects</h1>
-                <div class="showcaseItem">
-                    <img src="media/subOS.png" class="showcaseImage" />
-                    <div class="showcaseDescription">
-                        <h2 class="noMargin">@subOS</h2>
-                        <p>
-                            @We're making subOS, a versatile operating system
-                            built upon web technologies. We're redesigning subOS
-                            from the ground up to be a modern, secure, robust
-                            and open operating system.
-                        </p>
-                        <small>@Read the Complete Edition now</small><br><br>
-                        <button onclick="window.open('media/subOSProposal.pdf');">@Get the PDF</button>
-                    </div>
-                </div>
-                <br>
-                <div class="showcaseItem">
-                    <img src="https://nanoplay.subnodal.com/media/logo.svg" class="showcaseImage" />
-                    <div class="showcaseDescription">
-                        <h2 class="noMargin">NanoPlay</h2>
-                        <p>
-                            @The NanoPlay is a portable device that anyone can
-                            code. Designed for learners, tinkers and programmers
-                            alike, the NanoPlay features a versatile onboard OS
-                            that allows users to create their own apps.
-                        </p>
-                        <small>@Created in early 2021</small><br><br>
-                        <button onclick="window.open('https://nanoplay.subnodal.com');">@Visit site</button>
-                    </div>
-                </div>
-                <br>
-                <div class="showcaseItem">
-                    <img src="media/GameProxy.png" class="showcaseImage" />
-                    <div class="showcaseDescription">
-                        <h2 class="noMargin">GameProxy</h2>
-                        <p>
-                            @We've been creating a gaming website called GameProxy.
-                            GameProxy is a place where users can play, share, talk
-                            about and upload games. To quote our slogan: 'The
-                            social media network for games'. Why don't you take a
-                            look?!
-                        </p>
-                        <small>@Created in October 2018</small><br><br>
-                        <button onclick="window.open('https://gameproxy.github.io');">@Visit site</button>
-                    </div>
-                </div>
-                <br>
-                <div class="showcaseItem">
-                    <img src="https://cdn.sebdoe.com/livetransit.svg" class="showcaseImage" />
-                    <div class="showcaseDescription">
-                        <h2 class="noMargin">@LiveTransit</h2>
-                        <p>
-                            @LiveTransit is a powerful public transit tracking platform, using artificial intelligence on information from previous journeys as well as recognition from cameras to tell you exactly where your vehicle is and when it will arrive.
-                        </p>
-                        <small>@In planning</small><br><br>
-                        <button disabled>@In planning</button>
-                    </div>
-                </div>
-                <div class="showcaseItem">
-                    <img src="media/IAmAt.png" class="showcaseImage" />
-                    <div class="showcaseDescription">
-                        <h2 class="noMargin">@IAmAt</h2>
-                        <p>
-                            @IAmAt lets you create simple, text-only websites right in your browser.
-                            You can customise your URLs, getting any ones which are available.
-                        </p>
-                        <small>@Created on Boxing Day 2018</small><br><br>
-                        <button onclick="window.open('https://subnodal.com/IAmAt');">@Visit site</button>
-                    </div>
-                </div>
-            </section>
+            <h1 class="gradient mono">{<span class="wordmark">subnodal</span>}</h1>
+            <p>
+                <span class="line">Subnodal is getting an exciting reboot.</span>
+                <span class="line">See you on the other side.</span>
+            </p>
         </main>
-        <footer import="footer.html"></footer>
+        <section>
+            <p>A lot has changed since Subnodal's founding year of 2018. We're rebuilding Subnodal and making many exciting and drastic changes to its mission and scope, and we look forward to introducing a brand-new Subnodal to you soon.</p>
+        </section>
     </body>
 </html>

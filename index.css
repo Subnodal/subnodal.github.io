@@ -1,0 +1,90 @@
+.gradient {
+    margin: 0;
+    background: linear-gradient(
+        45deg,
+        hsl(0deg, 100%, 50%) 0%,
+        hsl(72deg, 100%, 50%) 20%,
+        hsl(144deg, 100%, 50%) 40%,
+        hsl(216deg, 100%, 50%) 60%,
+        hsl(288deg, 100%, 50%) 80%,
+        hsl(360deg, 100%, 50%) 100%
+    ) 0 0 / 1000% 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: gradient 30s infinite alternate ease-in-out;
+    animation-delay: -40s;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    backdrop-filter: brightness(0.2);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+main h1.gradient {
+    font-weight: normal;
+    font-size: 12vw;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    user-select: none;
+}
+
+main p {
+    padding-inline: 1rem;
+    font-size: clamp(1rem, 4vw, 2rem);
+    opacity: 0;
+    animation: enter 0.5s forwards;
+    animation-delay: 2s;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh);
+    margin: 0;
+    padding-inline: 10%;
+}
+
+section p {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    max-width: 800px;
+}
+
+.wordmark {
+    animation: weight 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes weight {
+    to {
+        font-weight: bold;
+    }
+}
+
+@keyframes enter {
+    to {
+        opacity: 1;
+    }
+}

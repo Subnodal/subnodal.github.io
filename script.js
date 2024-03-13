@@ -1,84 +1,24 @@
-function scrollDown() {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("section").not(".cover")[0].offsetTop - 80
-    }, 1000);
+const MESSAGE = "subnodal";
+const TEXT_ENTRY_DURATION = 250;
+
+function easeOutSine(t) {
+    return Math.sin((t * Math.PI) / 2);
 }
 
-$(function() {
-    $("*[import]").each(function() {
-        if (!window.location.href.startsWith("file:///")) {
-            var thisPassOn = this;
+window.addEventListener("load", function() {
+    var wordmark = document.querySelector(".wordmark");
 
-            $.ajax({
-                url: $(this).attr("import"),
-                error: function() {
-                    $(thisPassOn).html(_("Could not load associated information."));
-                }
-            }).done(function(data) {
-                $(thisPassOn).html(data);
-            });
-        } else {
-            $(this).html("<em>Content will go here at run-time: " + $(this).attr("import") + "</em>");
-        }
-    });
+    wordmark.textContent = "";
 
-    $("*[markdown]").each(function() {
-        if (!window.location.href.startsWith("file:///")) {
-            var thisPassOn = this;
+    setTimeout(function() {
+        var startTime = Date.now();
 
-            $.ajax({
-                url: $(this).attr("markdown"),
-                error: function() {
-                    $(thisPassOn).html(_("Could not load associated information."));
-                }
-            }).done(function(data) {
-                $(thisPassOn).html(new showdown.Converter().makeHtml(data));
-            });
-        } else {
-            $(this).html("<em>Content will go here at run-time: " + $(this).attr("markdown") + "</em>");
-        }
-    });
+        requestAnimationFrame(function render() {
+            var currentIndex = Math.floor(easeOutSine(Math.min((Date.now() - startTime) / TEXT_ENTRY_DURATION, 1)) * 8);
 
-    setInterval(function() {
-        $("*[markdownrf]").each(function() {
-            if (!window.location.href.startsWith("file:///")) {
-                var thisPassOn = this;
+            wordmark.textContent = MESSAGE.substring(0, currentIndex);
 
-                $.ajax({
-                    url: $(this).attr("markdownrf"),
-                    error: function() {
-                        $(thisPassOn).html(_("Could not load associated information."));
-                    }
-                }).done(function(data) {
-                    if ($(thisPassOn).html() != new showdown.Converter().makeHtml(data)) {
-                        $(thisPassOn).html(new showdown.Converter().makeHtml(data));
-                    }
-                });
-            } else {
-                $(this).html("<em>Content will go here at run-time: " + $(this).attr("markdownrf") + "</em>");
-            }
+            requestAnimationFrame(render);
         });
-    }, 1000);
-
-    if ($(window).scrollTop() >= 20) {
-        $(".arrowContainer").hide();
-    }
-
-    $("header").hide();
-
-    $(window).scroll(function() {
-        if ($(this).scrollTop() >= 20) {
-            $(".arrowContainer").fadeOut();
-        } else {
-            $(".arrowContainer").fadeIn();
-        }
-
-        if ($(this).scrollTop() >= ($("section.cover").height() / 1.5) - 50) {
-            $("header").fadeIn();
-        } else {
-            $("header").fadeOut();
-        }
-    });
-
-    $("[data-tl]").text(_($("[data-tl]").text()));
+    }, 500);
 });
